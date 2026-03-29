@@ -1,12 +1,12 @@
 # Student Profile - Example
 
-- **Name**: Sumanth
-- **GitHub Username**: @sumanth965
+- **Name**: Your Name Here
+- **GitHub Username**: @yourusername
 - **Branch**: MCA
-- **Semester**: 2nd 
+- **Semester**: 1st / 2nd / 3rd / 4th
 - **Favorite Programming Language**: Python / Java / JavaScript / etc.
 - **One thing I want to learn today**: ___
-- **Thank You**: ___
+
 ---
 
 > Copy this file, rename it to `<your-github-username>.md`, and fill in your details!
