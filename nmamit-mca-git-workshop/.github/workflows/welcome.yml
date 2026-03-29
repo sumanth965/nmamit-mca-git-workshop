@@ -1,0 +1,35 @@
+name: Welcome New Contributor
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  welcome:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+
+    steps:
+      - name: Welcome Message
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const prAuthor = context.payload.pull_request.user.login;
+            const message = `## Welcome to the Workshop, @${prAuthor}!
+
+            Thanks for submitting your first Pull Request!
+
+            Here's what happens next:
+            1. Your PR will be reviewed
+            2. If everything looks good, it will be merged
+            3. You've just contributed to an open source project!
+
+            **Great job learning Git & GitHub!**`;
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: message
+            });
